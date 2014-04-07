@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Better Check Boxes with jQuery and CSS | Tutorialzine Demo</title>
+
+<link rel="stylesheet" type="text/css" href="./CheckBox/jquery.tzCheckbox/jquery.tzCheckbox.css" />
+
+</head>
+<body>
+
+<div id="page">
+
+	<form method="get" action="./">
+    	<ul>
+    		<li><label for="ch_effects">Display effects: </label><input type="checkbox" id="ch_effects" name="ch_effects" data-on="Show effects" data-off="Hide effects" /></li>
+        	<li><label for="ch_location">Enable location tracking: </label><input type="checkbox" id="ch_location" name="ch_location" checked /></li>
+	        <li><label for="ch_showsearch">Include me in search results: </label><input type="checkbox" id="ch_showsearch" name="ch_showsearch" /></li>
+	        <li><label for="ch_emails">Email notifications: </label><input type="checkbox" id="ch_emails" name="ch_emails" data-on="ON" data-off="OFF" /></li>
+        </ul>
+    </form>
+
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="./CheckBox/jquery.tzCheckbox/jquery.tzCheckbox.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $('input[type=checkbox]').tzCheckbox({labels:['Enable','Disable']});
+});
+</script>
+
+
+</body>
+</html>

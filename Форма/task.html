@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html len="en">
+  <head>
+
+    <title>Registration</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <link href="./CheckBox/jquery.tzCheckbox/jquery.tzCheckbox.css" rel="stylesheet" type="text/css"  />
+
+    <meta charset="utf-8">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      
+      <!-- Создание разметки(разбиение страницы на колонки)-->
+      <div class="row">
+        
+        <div class="col-xs-2">
+        </div>
+
+        <!-- Форма-->
+        <div class="col-xs-8" style="background-color:white;">
+
+          <form role="form" onsubmit="return CheckMe(this)" name="registr_form">
+            <!-- Разбиение формы на 2 колонки -->
+            <div class="row" id="form">
+              <div class="col-xs-6">
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" placeholder="Username" name="user">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="text" class="form-control" placeholder="Password" name="password"> 
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="text" class="form-control" placeholder="Confirm Password" name="confirm_password">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-xs-6">
+                
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                    <input type="text" class="form-control" placeholder="Email" name="email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                     <select class="form-control" name="location">
+                        <option disabled selected style="display:none">Location</option>
+                        <option>Russia</option>
+                        <option>Great Britain</option>
+                        <option>Canada</option>
+                        <option>France</option>
+                      </select>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>  <!-- конец row для текстовых полей -->
+
+            <div class="row">
+
+              <div>
+              
+              <div class="col-xs-2">
+              </div>
+
+              <div class="col-xs-8">
+                <!-- CheckBox для подстверждения лицензии-->
+                <div id="page">
+                  <form method="get" action="./">
+                      <label for="ch_emails">I have read and accept the terms of use:</label><span style="float:right"><input type="checkbox" id="ch_emails" name="ch_emails" data-on="ON" data-off="OFF"/></span>
+                  </form>
+                </div><!-- Конец CheckBox-->           
+              </div>
+            </div>
+
+              <div class="col-xs-2">
+              </div>
+
+              <!-- Т.к. картинка занимает 2 строчки-->
+              <br><br>
+
+              <div class="col-xs-2">
+              </div>
+
+              <div class="col-xs-8">
+                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Sign up">
+              </div>
+
+            </div> <!-- Конец row для CheckBox-->
+
+            <br>
+           
+          </form>
+        </div> <!-- Конец формы -->
+
+        <div class="col-xs-2">
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./CheckBox/jquery.tzCheckbox/jquery.tzCheckbox.js"></script>
+
+    <!-- Для работы CheckBox-->
+    <script>
+
+    $(document).ready(function(){
+        $('input[type=checkbox]').tzCheckbox({labels:['Enable','Disable']});
+    });
+
+    // Функция валидации формы
+    function CheckMe(f) {
+      var user = f.user.value; // Имя пользователя
+      var password = f.password.value;
+      var conf_password = f.confirm_password.value;
+      var email = f.email.value;
+      var location = f.location.value;
+      
+      if (password != conf_password) {
+        return false
+      }
+
+      if ()
+    }
+
+    </script>
+  </body>
+</html>
