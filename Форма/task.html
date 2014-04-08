@@ -4,7 +4,7 @@
 
     <title>Registration</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS and CheckBox-->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" type="text/css" rel="stylesheet">
     <link href="./CheckBox/jquery.tzCheckbox/jquery.tzCheckbox.css" rel="stylesheet" type="text/css"  />
@@ -86,10 +86,10 @@
               </div>
 
               <div class="col-xs-8">
-                <!-- CheckBox для подстверждения лицензии-->
+                <!-- CheckBox для подстверждения принятия условий использования-->
                 <div id="page">
                   <form method="get" action="./">
-                      <label for="ch_emails">I have read and accept the terms of use:</label><span style="float:right"><input type="checkbox" id="ch_emails" name="ch_emails" data-on="YES" data-off="NO"/></span>
+                      <label for="terms_of_use" id="label_for_checkbox">I have read and accept the terms of use:</label><span style="float:right"><input type="checkbox" id="terms_of_use" name="terms_of_use" data-on="YES" data-off="NO"/></span>
                   </form>
                 </div><!-- Конец CheckBox-->           
               </div>
@@ -98,7 +98,6 @@
               <div class="col-xs-2">
               </div>
 
-              <!-- Т.к. картинка занимает 2 строчки-->
               <br><br>
 
               <div class="col-xs-2">
